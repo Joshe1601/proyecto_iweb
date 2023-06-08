@@ -1,6 +1,6 @@
-package com.example.adminpaginas.models.beans;
+package Beans;
 
-public class JuegoPosteadoAdministrador {
+public class JuegoPostAdmin extends Juegos {
     private int id_publicacion_admin;
     private int id_administrador;
     private int id_juego_posteado;
@@ -11,6 +11,15 @@ public class JuegoPosteadoAdministrador {
     private String oferta_del_juego;
     private float oferta_descuento;
     private int juego_necesario;
+
+    public JuegoPostAdmin(String nombre, String genero, float precio_unidad, String imagen) {
+        super(nombre, genero, precio_unidad, imagen);
+    }
+
+
+    //public JuegoPostAdmin(String nombre, String genero, float precio_unidad) {
+    //    super(nombre, genero, precio_unidad);
+    //}
 
 
     public int getId_publicacion_admin() {

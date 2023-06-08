@@ -1,15 +1,23 @@
-package com.example.adminpaginas.models.beans;
+package Beans;
 
 public class Juegos {
     private int idJuegos;
     private String nombre;
+    private String imagen;
     private String descripcion;
     private String rating;
     private String genero;
     private String consola;
-    private String precio_unidad;
+    private float precio_unidad;
     private String cantidad_stock;
     private Boolean estado_activo;
+
+    public Juegos(String nombre, String genero, float precio_unidad, String imagen) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.precio_unidad = precio_unidad;
+        this.imagen = imagen;
+    }
 
     public int getIdJuegos() {
         return idJuegos;
@@ -59,11 +67,19 @@ public class Juegos {
         this.consola = consola;
     }
 
-    public String getPrecio_unidad() {
+    public float getPrecio_unidad() {
         return precio_unidad;
     }
 
-    public void setPrecio_unidad(String precio_unidad) {
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public void setPrecio_unidad(float precio_unidad) {
         this.precio_unidad = precio_unidad;
     }
 
